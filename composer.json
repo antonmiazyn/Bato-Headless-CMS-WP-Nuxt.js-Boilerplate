@@ -1,0 +1,42 @@
+{
+    "name": "bato-headless/nuxt.js-wordpress-boilerplate",
+    "type": "boilerplate",
+    "repositories":[
+      {
+        "type": "composer",
+        "url": "https://wpackagist.org",
+        "only": [
+            "wpackagist-plugin/*",
+            "wpackagist-theme/*"
+        ]
+      }
+    ],
+    "require-dev": {
+        "roots/wordpress": "^6.0"
+    },
+    "authors": [
+        {
+            "name": "Bato Agence Web",
+            "email": "contact@bato-webdesign.net"
+        }
+    ],
+    "require": {
+        "wpackagist-plugin/acf-extended": "0.8.8.7",
+        "wpackagist-plugin/contact-form-7": "5.5.6.1",
+        "wpackagist-plugin/wordpress-seo": "^19.0",
+        "wpackagist-plugin/svg-support": "^2.4",
+        "wpackagist-plugin/json-api-cincopa": "^2.3",
+        "wpackagist-plugin/json-api-auth": "^2.7",
+        "wpackagist-plugin/json-api-user": "^3.8"
+    },
+    "extra": {
+      "installer-paths": {
+        "wordpress/wp-content/plugins/{$name}/": [
+            "type:wordpress-plugin"
+        ],
+        "wordpress/wp-content/themes/{$name}/": [
+          "type:wordpress-theme"
+        ]
+      }
+    }
+}
