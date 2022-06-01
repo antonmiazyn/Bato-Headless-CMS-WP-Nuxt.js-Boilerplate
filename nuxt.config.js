@@ -1,5 +1,3 @@
-import colors from 'vuetify/es5/util/colors'
-
 export default {
   mode: 'universal',
 
@@ -10,6 +8,7 @@ export default {
       baseURL: process.env.NODE_ENV === 'production' ? process.env.BASE_WP_PROD_URL : process.env.BASE_WP_DEV_URL
     }
   },
+
   head: {
     titleTemplate: '%s - bato-headless',
     title: 'bato-headless',
@@ -21,11 +20,11 @@ export default {
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
       { hid: 'description', name: 'description', content: '' },
       { name: 'format-detection', content: 'telephone=no' },
-      { rel: 'msapplication-TileImage', type: 'image/x-icon', href: '/bato.png' }
+      { rel: 'msapplication-TileImage', type: 'image/x-icon', href: '/favicon.png' }
     ],
     link: [
-      { rel: 'icon', type: 'image/x-icon', href: '/bato.png' },
-      { rel: 'apple-touch-icon', type: 'image/x-icon', href: '/bato.png' }
+      { rel: 'icon', type: 'image/x-icon', href: '/favicon.png' },
+      { rel: 'apple-touch-icon', type: 'image/x-icon', href: '/favicon.png' }
     ]
   },
 
@@ -65,24 +64,17 @@ export default {
 
   // Vuetify module configuration: https://go.nuxtjs.dev/config-vuetify
   vuetify: {
-    customVariables: ['~/assets/variables.scss'],
-    theme: {
-      dark: true,
-      themes: {
-        dark: {
-          primary: colors.blue.darken2,
-          accent: colors.grey.darken3,
-          secondary: colors.amber.darken3,
-          info: colors.teal.lighten1,
-          warning: colors.amber.base,
-          error: colors.deepOrange.accent4,
-          success: colors.green.accent3
-        }
-      }
-    }
+    customVariables: ['~/assets/scss/variables.scss'],
+    optionsPath: 'vuetify.options.js'
   },
 
   // Build Configuration: https://go.nuxtjs.dev/config-build
   build: {
+  },
+
+  styleResources: {
+    scss: [
+      '~/assets/scss/styles.scss'
+    ]
   }
 }
