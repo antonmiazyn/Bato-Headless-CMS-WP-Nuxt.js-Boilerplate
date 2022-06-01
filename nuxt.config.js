@@ -1,7 +1,15 @@
 import colors from 'vuetify/es5/util/colors'
 
 export default {
+  mode: 'universal',
+
   // Global page headers: https://go.nuxtjs.dev/config-head
+  publicRuntimeConfig: {
+    baseURL: process.env.NODE_ENV === 'production' ? process.env.BASE_WP_PROD_URL : process.env.BASE_WP_DEV_URL,
+    axios: {
+      baseURL: process.env.NODE_ENV === 'production' ? process.env.BASE_WP_PROD_URL : process.env.BASE_WP_DEV_URL
+    }
+  },
   head: {
     titleTemplate: '%s - bato-headless',
     title: 'bato-headless',
