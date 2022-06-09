@@ -1,8 +1,9 @@
 import Vue from 'vue'
 import Router from 'vue-router'
 
-import IndexPage from '~/pages/index'
-import InspirePage from '~/pages/inspire'
+import Homepage from '~/pages/index'
+import Documentation from '~/pages/docs'
+import Demo from '~/pages/demo'
 
 Vue.use(Router)
 
@@ -12,11 +13,15 @@ export function createRouter () {
     routes: [
       {
         path: '/',
-        component: IndexPage
+        component: Homepage
       },
       {
-        path: '/inspire',
-        component: InspirePage
+        path: '/docs',
+        component: Documentation
+      },
+      {
+        path: '/demo',
+        component: Demo
       }
     ]
   })

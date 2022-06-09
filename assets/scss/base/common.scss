@@ -8,3 +8,36 @@
 body {
   scroll-behavior: smooth;
 }
+
+.bato-headless {
+  &--full-height {
+    height: 100%;
+  }
+
+  h1, &--h1 {
+    font-size: 2.75rem;
+    line-height: 1.14;
+    font-weight: 700;
+  }
+
+  &--button {
+    height: auto !important;
+    text-transform: none !important;
+    font-size: 1.125rem !important;
+    border-radius: 0 !important;
+    font-weight: 600 !important;
+  }
+
+  &--button:not(.outlined) {
+    color: $color-bato-dark !important;
+    letter-spacing: normal !important;
+  }
+
+  &--descriptive-subtitle {
+    font-size: 1.125rem;
+    color: $color-bato-gray;
+    line-height: 1.44;
+    font-weight: 300;
+    max-width: 54rem;
+  }
+}
